@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url("images.png");
+        }
+        .status span {
+            margin-top: 400px;
+            width: 70px;
+        }
+        h1 {
+            text-align: center;
+            background-color: rgb(231, 234, 142);
+        }
+        .status h1 {
+            margin-left: 450px;
+            border: 2px solid black;
+            border-radius: 75px;
+            width: 350px;
+            height: 60px;
+            margin-top: 50px;
+           position: relative; /* Allow positioning of tick inside */
+        }
+        .status h1 .tick {
+            color: #169233; /* Green color for the tick */
+            font-size: 24px;
+            position: absolute;
+            right: -80px; /* Adjust position of the tick */
+            top: -385px;
+            /* transform: translateY(35px); */
+            border: 2px solid black;
+            border-radius: 100%;
+            box-shadow: -3px -3px 105px rgb(128, 11, 120);
+        }
+        .tick{
+            background-color:rgb(234, 185, 187);
+        }
+        .status {
+            border: 2px solid black;
+            border-radius: 75px;
+            height: 1000px;
+            margin-top: 50px;
+            width: 1200px;
+            margin-left: 100px;
+            background-color:rgb(29, 192, 140);
+        box-shadow: -3px -3px 105px rgb(128, 11, 120);
+   }
+    </style>
+</head>
+<body>
+    <div class="status">
+        <span><h1>Application Form Status</h1></span>
+        <h1>Registration <span class="tick">&#10004;</span></h1>
+        <h1>Application Form<span class="tick">&#10004;</span></h1>
+        <h1>Upload Document<span class="tick">&#10004;</span></h1>
+        <h1>Final Print<span class="tick">&#10004;</span></h1>
+        <h1>SAG BUREAU<span class="tick">&#10004;</span></h1>
+        <h1>SAG FINANCE<span class="tick">&#10004;</span></h1>
+        <h1>Payment Successful<span class="tick">&#10004;</span></h1>
+    </div>
+</body>
+</html>

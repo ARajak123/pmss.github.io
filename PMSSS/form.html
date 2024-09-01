@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+    <style>
+        .Education {
+            border: 2px solid black;
+            margin: 20px 80px;
+            border-radius: 75px;
+            padding: 20px;
+            background-color: aquamarine;
+        }
+
+        .head {
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+
+        }
+
+        .form-group label {
+            width: 45%;
+            font-size: large;
+            margin-left: 20px;
+        }
+
+        .form-group input {
+            width: 50%;
+            padding: 5px;
+            font-size: large;
+        }
+
+        .bank {
+            margin-top: 30px;
+            font-size: 30px;
+        }
+
+        .bank .form-group {
+            margin-bottom: 15px;
+        }
+
+        button {
+            background-color: #e3163c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 75px;
+            box-shadow: -3px -3px 15px rgb(97, 5, 121);
+            margin-left: 350px;
+        }
+
+        #b2 {
+
+            background-color: #27cd0d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 75px;
+            box-shadow: -3px -3px 15px rgb(97, 5, 121);
+
+        }
+        .buttons{
+            display: flex;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Education">
+        <div class="head">
+            <h1><i><u>Application Form</u></i></h1>
+            <h2>Education Details</h2>
+        </div>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name">
+            <label for="dob">DOB:</label>
+            <input type="date" id="dob">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone no:</label>
+            <input type="tel" id="phone">
+            <label for="email">Email:</label>
+            <input type="email" id="email">
+        </div>
+        <div class="form-group">
+            <label for="tenthMarksheet">10th Marksheet no:</label>
+            <input type="text" id="tenthMarksheet">
+            <label for="twelfthMarksheet">12th Marksheet no:</label>
+            <input type="text" id="twelfthMarksheet">
+        </div>
+        <div class="form-group">
+            <label for="casteCertificate">Caste Certificate no:</label>
+            <input type="text" id="casteCertificate">
+            <label for="domicileCertificate">Domicile Certificate no:</label>
+            <input type="text" id="domicileCertificate">
+        </div>
+        <div class="form-group">
+            <label for="incomeCertificate">Income certificate no:</label>
+            <input type="text" id="incomeCertificate">
+            <label for="altMobile">Alternate mobile no:</label>
+            <input type="tel" id="altMobile">
+        </div>
+        <div class="form-group">
+            <label for="schoolName">School Name:</label>
+            <input type="text" id="schoolName">
+            <label for="schoolBoard">School Board:</label>
+            <input type="text" id="schoolBoard">
+        </div>
+        <div class="form-group">
+            <label for="district">District:</label>
+            <input type="text" id="district">
+            <label for="pincode">Pincode:</label>
+            <input type="text" id="pincode">
+        </div>
+        <div class="form-group">
+            <label for="transferCertificateNo">Transfer certificate no:</label>
+            <input type="text" id="transferCertificateNo">
+            <label for="transferCertificateDate">Transfer certificate Date:</label>
+            <input type="date" id="transferCertificateDate">
+        </div>
+
+        <div class="bank">
+            <b>Bank Details:</b>
+            <div class="form-group">
+                <label for="bankName">Bank Name:</label>
+                <input type="text" id="bankName">
+                <label for="bankAccountNo">Bank Account No:</label>
+                <input type="text" id="bankAccountNo">
+            </div>
+            <div class="form-group">
+                <label for="ifscCode">IFSC Code:</label>
+                <input type="text" id="ifscCode">
+                <label for="bankBranchName">Bank branch Name:</label>
+                <input type="text" id="bankBranchName">
+            </div>
+            <br>
+            <div class="buttons">
+
+                <a href="formStatus.html"><button id="b2">Current Status</button></a>
+                <br><br>
+                <a href="uploaddoc.html"><button>Upload Documents</button></a>
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevent the default form submission
+            window.location.href = 'uploaddoc.html'; // Redirect to the new page
+            return false; // Return false to prevent form submission
+        }
+    </script>
+</body>
+
+</html>

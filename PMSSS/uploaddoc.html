@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Upload Page</title>
+
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .upload-section {
+        /* background-color: #ffffff; */
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 80%;
+        max-width: 800px;
+        text-align: center;
+        background-color: aquamarine;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    thead {
+        background-color: #f2f2f2;
+    }
+
+    thead th {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ccc;
+    }
+
+    tbody tr td {
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+        text-align: left;
+    }
+
+    /* button {
+        background-color: #007bff;
+        color: #ffffff;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        background-color: #e3163c;
+
+    } */
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    /* .save-submit {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.save {
+    background-color: #ffc107;
+} */
+
+    .submit {
+        background-color: #1967ce;
+    }
+
+    .save:hover {
+        background-color: #e0a800;
+    }
+
+    .submit:hover {
+        background-color: #218838;
+    }
+
+   
+    button {
+        background-color: #e3163c;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 75px;
+        box-shadow: -3px -3px 15px rgb(97, 5, 121);
+        margin-left: 350px;
+    }
+
+    #b2 {
+
+        background-color: #27cd0d;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 75px;
+        box-shadow: -3px -3px 15px rgb(97, 5, 121);
+        
+    }
+
+    .buttons {
+        display: flex;
+       margin-left: -250px;
+    }
+</style>
+
+<body>
+    <section class="upload-section">
+        <h2>Upload Documents</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>SNO.</th>
+                    <th>Documents Type</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- First Document -->
+                <tr>
+                    <td>1</td>
+                    <td>Domicile Certificate</td>
+                    <td>
+                        <form action="/upload" method="POST" enctype="multipart/form-data">
+                            <label for="file1" class="upload-button">Upload</label>
+                            <input type="file" id="file1" name="document" accept=".pdf,.doc,.docx,.txt" required>
+                        </form>
+                    </td>
+                </tr>
+
+                <!-- Second Document -->
+                <tr>
+                    <td>2</td>
+                    <td>Student Photo/Sign</td>
+                    <td>
+                        <form action="/upload" method="POST" enctype="multipart/form-data">
+                            <label for="file2" class="upload-button">Upload</label>
+                            <input type="file" id="file2" name="document" accept=".pdf,.jpg,.jpeg,.png" required>
+                        </form>
+                    </td>
+                </tr>
+
+                <!-- Third Document -->
+                <tr>
+                    <td>3</td>
+                    <td>Institute Verification Form</td>
+                    <td>
+                        <form action="/upload" method="POST" enctype="multipart/form-data">
+                            <label for="file3" class="upload-button">Upload</label>
+                            <input type="file" id="file3" name="document" accept=".pdf,.doc,.docx,.txt" required>
+                        </form>
+                    </td>
+                </tr>
+
+                <!-- Fourth Document -->
+                <tr>
+                    <td>4</td>
+                    <td>Income Certificate</td>
+                    <td>
+                        <form action="/upload" method="POST" enctype="multipart/form-data">
+                            <label for="file4" class="upload-button">Upload</label>
+                            <input type="file" id="file4" name="document" accept=".pdf,.doc,.docx,.txt" required>
+                        </form>
+                    </td>
+                </tr>
+
+                <!-- Fifth Document -->
+                <tr>
+                    <td>5</td>
+                    <td>Marksheet</td>
+                    <td>
+                        <form action="/upload" method="POST" enctype="multipart/form-data">
+                            <label for="file5" class="upload-button">Upload</label>
+                            <input type="file" id="file5" name="document" accept=".pdf,.jpg,.jpeg,.png" required>
+                        </form>
+                    </td>
+                </tr>
+
+                <!-- Sixth Document -->
+                <tr>
+                    <td>6</td>
+                    <td>Fee Receipt of Current Course Year</td>
+                    <td>
+                        <form action="/upload" method="POST" enctype="multipart/form-data">
+                            <label for="file6" class="upload-button">Upload</label>
+                            <input type="file" id="file6" name="document" accept=".pdf,.doc,.docx,.txt" required>
+                        </form>
+                    </td>
+                </tr>
+
+                <!-- Seventh Document -->
+                <tr>
+                    <td>7</td>
+                    <td>Proof of Bank Account in the Name of Student</td>
+                    <td>
+                        <form action="/upload" method="POST" enctype="multipart/form-data">
+                            <label for="file7" class="upload-button">Upload</label>
+                            <input type="file" id="file7" name="document" accept=".pdf,.jpg,.jpeg,.png" required>
+                        </form>
+                    </td>
+                </tr>
+
+                <!-- Eighth Document -->
+                <tr>
+                    <td>8</td>
+                    <td>Scanned Copy of Aadhaar Card</td>
+                    <td>
+                        <form action="/upload" method="POST" enctype="multipart/form-data">
+                            <label for="file8" class="upload-button">Upload</label>
+                            <input type="file" id="file8" name="document" accept=".pdf,.jpg,.jpeg,.png" required>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- <div class="save-submit">
+            <button class="save">Save as Draft</button>
+            <button class="submit" onclick="handleSubmit()">Submit</button>
+        </div> -->
+        <div class="buttons">
+            
+            <a href="UploadStatus.html"><button id="b2">Current Status</button></a>
+             <br><br>
+            <a href="receipt2.html"><button class="submit">Submit</button></a>
+
+        </div>
+    </section>
+
+    <!-- <script>
+        function handleSubmit() {
+            // Redirect to the receipt page
+            window.location.href = 'receipt2.html';
+        }
+    </script> -->
+
+</body>
+
+</html>

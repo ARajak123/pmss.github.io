@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarship Registration Form</title>
+    <link rel="stylesheet" href="reg.css">
+</head>
+<style>
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f2f2f2;
+}
+
+header {
+    background-color: #A52A2A;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.header-content .logo {
+    display: block;
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+}
+
+header h1, header h2, header h3 {
+    margin: 5px 0;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.steps-section {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.steps-section .step {
+    text-align: center;
+    flex: 1;
+}
+
+.steps-section .step img {
+    width: 50px;
+    height: 50px;
+}
+
+.steps-section .step p {
+    margin: 10px 0 0 0;
+    font-weight: bold;
+}
+
+
+.instructions {
+    background-color: #FFDD57;
+    padding: 20px;
+    width: 100%;
+    border: 2px solid #A52A2A;
+    border-radius: 8px;
+}
+
+.Autofill{
+    background-color: #FFFFFF;
+    padding: 20px;
+    width: 65%;
+    border: 2px solid #f1eded;
+    border-radius: 8px;
+}
+
+.form-section {
+    background-color: #FFFFFF;
+    padding: 20px;
+    width: 100%;
+    border: 2px solid #f1eded;
+    border-radius: 8px;
+}
+
+/* form {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+   
+} */
+
+.form-row {
+    width: 48%;
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form select, form input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #228B22;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+form button:hover {
+    background-color: #006400;
+}
+.captcha-image{
+    border: 1px solid black;
+    
+}
+
+</style>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="j&klogo.png" alt="Logo" class="logo">
+            <h1>Scholarship Reimbursement Online System</h1>
+            <h3>Jammu_and_Kashmir</h3>
+        </div>
+    </header>
+
+
+    <!-- <section class="steps-section">
+        <div class="step">
+            <img src="step1.png" alt="Step 1">
+            <p>Registration</p>
+        </div>
+        <div class="step">
+            <img src="step2.png" alt="Step 2">
+            <p>Aadhaar Authentication</p>
+        </div>
+        <div class="step">
+            <img src="step3.png" alt="Step 3">
+            <p>Form Submission</p>
+        </div>
+        <div class="step">
+            <img src="step4.png" alt="Step 4">
+            <p>Verification From Institutions</p>
+        </div>
+        <div class="step">
+            <img src="step5.png" alt="Step 5">
+            <p>Scrutiny</p>
+        </div>
+        <div class="step">
+            <img src="step6.png" alt="Step 6">
+            <p>Verification From District Welfare Committee</p>
+        </div>
+        <div class="step">
+            <img src="step7.png" alt="Step 7">
+            <p>Aadhaar Based Fund Disbursement</p>
+        </div>
+    </section> -->
+
+    <main>
+
+        <section class="instructions">
+            <h4>Important Instructions</h4>
+            <ol>
+                <li>Registration form is for only those students who are applying for the first time.</li>
+                <li>Every necessary information should be filled in capital English letters.</li>
+            </ol>
+        </section>
+
+
+        <section class="Autofill">
+            <label for="aadhaar">Aadhaar Number :</label>
+            <input type="text" id="aadhaar" name="aadhaar" required>
+
+            <br><br>
+
+            <label for="name">Name : Amandeep Verma</label>
+            <!-- <input type="text" id="name"> -->
+            <br><br>
+            <label for="DOB">DOB : 23/08/24</label>
+            <!-- <input type="date" id="DOB"> -->
+        </section>
+
+        <br><br>
+
+       
+        <section class="form-section">
+           
+
+            <!-- Main Form Starts Here -->
+            <form action="receipt.html" method="GET">
+                <h4>Year (2024-25)</h4>
+
+                <div class="form-row">
+                    <label for="district">District</label>
+                    <select id="district">
+                        <option value="" disabled selected>Select District</option>
+                        <option value="Srinagar">Srinagar</option>
+                        <option value="Jammu">Jammu</option>
+                        <option value="Anantnag">Anantnag</option>
+                        <option value="Baramulla">Baramulla</option>
+                        <option value="Kupwara">Kupwara</option>
+                        <option value="Pulwama">Pulwama</option>
+                        <option value="Kathua">Kathua</option>
+                        <option value="Udhampur">Udhampur</option>
+                    </select>
+
+                    <label for="institution">Institution</label>
+                    <select id="institution">
+                        <option>SELECT</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="category">Category</label>
+                    <select id="category">
+                        <option>SELECT</option>
+                    </select>
+
+                    <label for="religion">Religion</label>
+                    <select id="religion">
+                        <option>SELECT</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="student-name">Student Name</label>
+                    <input type="text" id="student-name">
+
+                    <label for="mobile">Phone Number</label>
+                    <input type="tel" id="mobile">
+                </div>
+
+                <div class="form-row">
+                    <label for="year">Passing Year</label>
+                    <select id="year">
+                        <option>SELECT YEAR</option>
+                    </select>
+
+                    <label for="board">High School Board</label>
+                    <select id="board">
+                        <option>SELECT</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="password">Create Password</label>
+                    <input type="password" id="password">
+
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password">
+                </div>
+
+                <div class="form-row">
+                    <label for="captcha">CAPTCHA</label>
+                    <div class="captcha-image">
+                        <span>U7ARHF</span>
+                    </div>
+                    <input type="text" id="captcha">
+                </div>
+
+                <div class="form-row">
+                    <button type="submit">Submit</button>
+                </div>
+
+            </form>
+            <!-- Main Form Ends Here -->
+
+        </section>
+    </main>
+
+    <script>
+        window.onload = function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const aadhaar = urlParams.get('aadhaar');
+            if (aadhaar) {
+                document.getElementById('aadhaar').value = aadhaar;
+            }
+        };
+    </script>
+</body>
+
+</html>

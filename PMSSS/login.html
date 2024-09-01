@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    
+</head>
+<style>
+    body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #252d46;
+    font-family: Arial, sans-serif;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    background: linear-gradient(135deg, #6e69fe, #5f5272);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.login-box {
+    text-align: center;
+}
+
+h2 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #ffb037;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #ff9900;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.options label {
+    color: white;
+    font-size: 14px;
+}
+
+.forgot-password {
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.create-account {
+    margin-top: 20px;
+    color: white;
+    font-size: 14px;
+}
+
+.create-account a {
+    color: #ffb037;
+    text-decoration: none;
+}
+
+.create-account a:hover {
+    text-decoration: underline;
+}
+
+</style>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Sign In</h2>
+            <form id="login-form">
+                <div class="input-group">
+                    <input type="text" placeholder="User Id" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                
+                <button type="button" class="login-btn" onclick="redirectToApp()">Login</button>
+
+                <div class="options">
+                    <label>
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+            </form>
+            <div class="create-account">
+                Not a member? <a href="reg1.html">Register here</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function redirectToApp() {
+            window.location.href = 'form.html';
+        }
+    </script>
+</body>
+
+</html>

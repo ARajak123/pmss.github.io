@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Minister Special Scholorship Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<style>
+    /* Reset some basic styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Body styling */
+    body {
+        font-family: 'Arial', sans-serif;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    /* Header Styling */
+    header {
+        background-color: rgb(145, 181, 239);
+        /* Header background color */
+        color: #fff;
+        padding: 15px 0;
+    }
+
+    header nav .logo,
+    header nav .logo2 {
+        background-color: transparent;
+        /* Set background to transparent */
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    header nav .logo img,
+    header nav .logo2 img {
+        width: 150px;
+        display: block;
+        margin: auto;
+        border-radius: 5px;
+
+        /* Attempt to blend image with background */
+        background-color: rgb(145, 181, 239);
+        /* Same as header background */
+        mix-blend-mode: multiply;
+        /* This can help blend the image */
+
+
+    }
+
+    /* header nav .logo img {
+    width: 150px;
+    height: 150px; 
+    display: block;
+    margin: auto;
+    border-radius: 50%; 
+    border: 2px solid black; 
+} 
+*/
+
+    header nav .logo2 {
+        display: flex;
+        gap: 10px;
+    }
+
+
+    #list {
+        display: flex;
+        float: left;
+        list-style-type: none;
+        padding-left: 200px;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        gap: 50px;
+        margin-right: 100px;
+
+
+
+    }
+
+    header nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 20px;
+    }
+
+    header nav .logo img {
+        width: 150px;
+    }
+
+    header nav .nav-links {
+        list-style: none;
+        justify-content: space-between;
+        display: flex;
+        transition: all 0.3s ease;
+
+    }
+
+    header nav .marquee {
+        font-size: xx-large;
+    }
+
+
+    header nav .nav-links li {
+        margin-left: 10px;
+        justify-content: space-evenly;
+
+    }
+
+    header nav .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        transition: color 0.3s ease;
+
+    }
+
+    header nav .nav-links a:hover {
+        color: #ffd700;
+    }
+
+    .nav-toggle {
+        display: none;
+        background-color: transparent;
+        color: white;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .nav-open {
+        display: block !important;
+    }
+
+    /* Hero Section */
+    .hero {
+        position: relative;
+        width: 100%;
+        height: 80vh;
+        background: url('../images/hero-banner.jpg') no-repeat center center/cover;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .hero .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero .hero-content {
+        position: relative;
+        /* z-index: 2; */
+    }
+
+    .hero .hero-content h1 {
+        font-size: 52px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .hero .hero-content p {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    .hero .btn-primary {
+        background-color: #ffd700;
+        color: #004080;
+        padding: 15px 30px;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .hero .btn-primary:hover {
+        background-color: #ffcc00;
+    }
+
+
+
+    /* Features Section */
+    .features {
+        display: flex;
+        justify-content: space-around;
+        padding: 50px 0;
+        background: #f4f4f4;
+    }
+
+    .features .feature-item {
+        width: 30%;
+        text-align: center;
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .features .feature-item:hover {
+        transform: translateY(-10px);
+    }
+
+    .features .feature-item i {
+        color: #004080;
+        margin-bottom: 15px;
+    }
+
+    .features .feature-item h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .features .feature-item p {
+        font-size: 16px;
+    }
+
+    /* Call-to-Action Section */
+    .cta {
+        background: #004080;
+        color: #fff;
+        text-align: center;
+        padding: 50px 20px;
+    }
+
+    .cta h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .cta p {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .cta .btn-secondary {
+        background-color: #ffd700;
+        color: #004080;
+        padding: 15px 30px;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .cta .btn-secondary:hover {
+        background-color: #ffcc00;
+    }
+
+    /* Footer Styling */
+    footer {
+        background: #004080;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    footer .footer-content {
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 20px;
+    }
+
+    footer .footer-content p {
+        margin-bottom: 10px;
+    }
+
+    footer .social-icons {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+    }
+
+    footer .social-icons li {
+        margin: 0 10px;
+    }
+
+    footer .social-icons a {
+        color: #ffd700;
+        font-size: 20px;
+        transition: color 0.3s ease;
+    }
+
+    footer .social-icons a:hover {
+        color: #ffcc00;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .features {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .features .feature-item {
+            width: 80%;
+            margin-bottom: 20px;
+        }
+
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            background-color: #004080;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            padding: 10px 0;
+            z-index: 1;
+        }
+
+        .nav-toggle {
+            display: inline-block;
+        }
+    }
+
+
+
+
+
+
+
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        /* height: 100vh; */
+        background-color: #f3f3f3;
+    }
+
+    .slider {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        /* border-radius: 75px; */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .slides {
+        display: flex;
+        width: 100%;
+        animation: slide 10s infinite;
+    }
+
+    .slides img {
+        width: 100%;
+        /* border-radius: 10px; */
+    }
+
+    @keyframes slide {
+        0% {
+            transform: translateX(0);
+        }
+
+        33% {
+            transform: translateX(0);
+        }
+
+        40% {
+            transform: translateX(-100%);
+        }
+
+        73% {
+            transform: translateX(-100%);
+        }
+
+        80% {
+            transform: translateX(-200%);
+        }
+
+        100% {
+            transform: translateX(-200%);
+        }
+    }
+
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f4f4;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(90deg, #0066ff, #00ccff);
+        /* Vibrant gradient background */
+        padding: 15px 30px;
+        border-radius: 40px;
+        /* More rounded corners for the header */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        margin: 150px;
+    }
+
+    .navbar-logo {
+        font-size: 26px;
+        font-weight: bold;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .navbar-menu {
+        display: flex;
+        gap: 25px;
+    }
+
+    .navbar-menu a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 10px 15px;
+        border-radius: 30px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .navbar-menu a:hover {
+        background-color: #004080;
+        /* Darker shade on hover */
+        transform: scale(1.1);
+    }
+
+    .navbar-button {
+        position: relative;
+        background-color: #ffcc00;
+        /* Gold button for contrast */
+        color: #004080;
+        padding: 12px 25px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 30px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        cursor: pointer;
+        margin-right: 15px;
+        /* Shift button slightly to the left */
+    }
+
+    .navbar-button:hover {
+        background-color: #e6b800;
+        /* Darker shade of gold on hover */
+        transform: scale(1.1);
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 200px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        border-radius: 15px;
+        top: 100%;
+        left: -15px;
+        /* Adjusted to align with the shifted button */
+    }
+
+    .dropdown-content a {
+        color: #004080;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        border-radius: 15px;
+        transition: background-color 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #e6b800;
+    }
+
+    .navbar-button:hover .dropdown-content {
+        display: block;
+    }
+
+    @media (max-width: 768px) {
+        .navbar {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .navbar-menu {
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .navbar-menu a {
+            width: 100%;
+            text-align: center;
+        }
+
+        .navbar-button {
+            width: 100%;
+            text-align: center;
+            margin-top: 10px;
+
+        }
+
+        .dropdown-content {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f4f4;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(90deg, #0066ff, #00ccff);
+        /* Vibrant gradient background */
+        padding: 15px 30px;
+        border-radius: 40px;
+        /* More rounded corners for the header */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        margin: 15px;
+        z-index: 10;
+    }
+
+    .navbar-logo {
+        font-size: 26px;
+        font-weight: bold;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .navbar-menu {
+        display: flex;
+        gap: 25px;
+    }
+
+    .navbar-menu a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 10px 15px;
+        border-radius: 30px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .navbar-menu a:hover {
+        background-color: #004080;
+        /* Darker shade on hover */
+        transform: scale(1.1);
+
+    }
+
+    .navbar-button {
+        position: relative;
+        background-color: #ffcc00;
+        /* Gold button for contrast */
+        color: #004080;
+        padding: 12px 25px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 30px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        cursor: pointer;
+        margin-right: 15px;
+        z-index: 10;
+        /* Shift button slightly to the left */
+    }
+
+    .navbar-button:hover {
+        background-color: #e6b800;
+        /* Darker shade of gold on hover */
+        transform: scale(1.1);
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 200px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 20;
+        border-radius: 15px;
+        top: 100%;
+        left: -15px;
+        /* Adjusted to align with the shifted button */
+    }
+
+    .dropdown-content a {
+        color: #004080;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        border-radius: 15px;
+        transition: background-color 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #e6b800;
+    }
+
+    .navbar-button:hover .dropdown-content {
+        display: block;
+    }
+
+    @media (max-width: 768px) {
+        .navbar {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .navbar-menu {
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .navbar-menu a {
+            width: 100%;
+            text-align: center;
+        }
+
+        .navbar-button {
+            width: 100%;
+            text-align: center;
+            margin-top: 10px;
+
+
+        }
+
+        .dropdown-content {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+</style>
+</head>
+
+<body>
+
+
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="modi.jpeg" alt=" Scholarship Logo">
+            </div>
+
+            <!-- <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Scholarship</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Status</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul> -->
+            <div class="marquee">
+                <marquee behavior="" direction="">Scholarship and Fees Reimebursement Online System</marquee>
+            </div>
+            <button class="nav-toggle"><i class="fas fa-bars"></i></button>
+            <div class="logo2">
+                <img src="SW.jpeg" alt="img">
+                <img src="DI.jpeg" alt="img2">
+            </div>
+        </nav>
+
+
+
+        <!-- <nav class="nav-links" style="background-color: rgb(216, 116, 100); border-radius: 75px;"> -->
+
+        <!-- <div class="nav-links">
+                <ul id="list">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="#" id="servicesLink">Students</a></li>
+                    <li><a href="Status.html">Status</a></li>
+                    <li><a href="#">Institute</a></li>
+                    <li><a href="login2.html">SAG Bureau</a></li>
+                    <li><a href="login3.html">Finance Bureau</a></li>
+                    <li><a href="login.html">Sign in</a></li>
+                </ul>
+            </div> -->
+
+        <div class="navbar">
+            <div class="navbar-logo">Scholarship Portal</div>
+            <div class="navbar-menu">
+                <a href="Home.html">Home</a>
+                <a href="#" id="servicesLink">Students</a>
+                <a href="Status.html">Status</a>
+                <a href="#">Institute</a>
+                <a href="login2.html">SAG Bureau</a>
+                <a href="login3.html">Finance Bureau</a>
+                <!-- <a href="login.html">Sign in</a> -->
+            </div>
+            <div class="navbar-button">
+                Login
+                <div class="dropdown-content">
+                    <a href="login.html">Student Login</a>
+                    <a href="login2.html">SAG Bureau Login</a>
+                    <a href="login3.html">Finance Bureau Login</a>
+                </div>
+            </div>
+        </div>
+
+        </nav>
+    </header>
+
+
+
+    <main>
+        <section class="hero">
+            <div class="overlay" style="background-image: url(bg1.avif); background-size: cover;">
+            </div>
+            <div class="hero-content">
+                <h1>Scholarship Portal</h1>
+                <p>Empowering students with financial aid. Apply easily and track your application status.</p>
+                <a href="reg1.html" class="btn-primary">Apply Now</a>
+            </div>
+        </section>
+        <br>
+        <br>
+        <div class="sliderblock">
+
+            <div class="slider" style="width: 3000px;">
+                <div class="slides">
+                    <img src="ppt-banner.jpeg" alt="Slide 1" style="width: 100%;">
+                    <img src="corona.jpeg" alt="Slide 2" style="width: 100%;">
+                    <img src="Saksham.jpeg" alt="Slide 3" style="width: 100%;">
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <section class="features">
+            <div class="feature-item">
+                <i class="fas fa-pencil-alt fa-3x"></i>
+               <a href="reg1.html"><h2>Apply Online</h2></a> 
+                <p>Submit your scholarship application online with ease.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-chart-line fa-3x"></i>
+               <a href="FinalStatus.html"> <h2> Track Your Application</h2></a>
+                <p>Monitor your application status in real-time.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-headset fa-3x"></i>
+                <h2>24/7 Support</h2>
+                <p>Get assistance from our support team anytime.</p>
+            </div>
+        </section>
+
+        <section class="add">
+
+            <img src="/ppt banner.jpg" alt="image" style="width:100%;">
+
+        </section>
+
+        <section class="cta">
+            <h2>Don't miss out on your opportunity</h2>
+            <p>Join thousands of students who have benefited from our scholarship programs.</p>
+            <a href="#" class="btn-secondary">Learn More</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 UP Scholarship Portal. All rights reserved.</p>
+            <ul class="social-icons">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+
+</body>
+
+</html>

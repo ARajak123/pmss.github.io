@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UP Scholarship Portal - Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* Reset some basic styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Body styling */
+    body {
+        font-family: 'Arial', sans-serif;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    /* Header Styling */
+    header {
+        background-color: rgb(145, 181, 239);
+        /* Header background color */
+        color: #fff;
+        padding: 15px 0;
+    }
+
+    header nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 20px;
+    }
+
+    header nav .logo,
+    header nav .logo2 {
+        background-color: transparent;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    header nav .logo img,
+    header nav .logo2 img {
+        width: 150px;
+        display: block;
+        margin: auto;
+        border-radius: 5px;
+        background-color: rgb(145, 181, 239);
+        mix-blend-mode: multiply;
+    }
+
+    header nav .logo2 {
+        display: flex;
+        gap: 10px;
+    }
+
+    #list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    header nav .nav-links {
+        list-style: none;
+        display: flex;
+        justify-content: space-around; /* Changed to space-around */
+        align-items: center;
+        width: 100%;
+        background-color: #f36f56;
+        padding: 10px 0;
+    }
+
+    header nav .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        transition: color 0.3s ease;
+    }
+
+    header nav .nav-links a:hover {
+        color: #ffd700;
+    }
+
+    .nav-toggle {
+        display: none;
+        background-color: transparent;
+        color: white;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .nav-open {
+        display: block !important;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        header nav {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f36f56;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            padding: 10px 0;
+            z-index: 1;
+        }
+
+        .nav-toggle {
+            display: inline-block;
+        }
+    }
+</style>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="modi.jpeg" alt="Scholarship Logo">
+            </div>
+            <div class="marquee">
+                <marquee behavior="" direction="">Scholarship and Fees Reimbursement Online System</marquee>
+            </div>
+            <button class="nav-toggle"><i class="fas fa-bars"></i></button>
+            <div class="logo2">
+                <img src="SW.jpeg" alt="img">
+                <img src="DI.jpeg" alt="img2">
+            </div>
+            <ul id="list" class="nav-links">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="#" id="servicesLink">Students</a></li>
+                <li><a href="#">Status</a></li>
+                <li><a href="#">Institute</a></li>
+                <li><a href="sag-dashboard.html">SAG Bureau</a></li>
+                <li><a href="finance-dashboard.html">Finance Bureau</a></li>
+                <li><a href="login.html">Sign in</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Main content goes here -->
+    </main>
+
+    <footer>
+        <!-- Footer content goes here -->
+    </footer>
+</body>
+
+</html>

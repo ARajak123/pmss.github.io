@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PMSSS Portal</title>
+    <link rel="stylesheet" href="reg1.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1b2a3c;
+    color: #fff;
+}
+
+.header {
+    background-color: #102c4e;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+    margin-right: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    background-color: #1b3b59;
+    border-radius: 4px;
+}
+
+nav ul li a:hover {
+    background-color: #3a5078;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.aadhaar-section, .instructions {
+    background-color: #1b3b59;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    margin-right: 10px;
+}
+
+.aadhaar-section:last-child {
+    margin-right: 0;
+}
+
+.aadhaar-section h2, .instructions h3 {
+    margin-bottom: 20px;
+    color: #FFD700;
+}
+
+.aadhaar-section input[type="text"] {
+    width: 94%;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.aadhaar-section button {
+    width: 100%;
+    padding: 15px;
+    background-color: #FFD700;
+    color: #1b2a3c;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.aadhaar-section button:hover {
+    background-color: #ffcc00;
+}
+
+.instructions ul {
+    list-style-type: disc;
+    margin: 0;
+    padding: 0;
+    padding-left: 20px;
+}
+
+.instructions ul li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.footer {
+    background-color: #102c4e;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+    color: white;
+}
+
+body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(90deg, #0066ff, #00ccff); /* Vibrant gradient background */
+            padding: 15px 30px;
+            border-radius: 40px; /* More rounded corners for the header */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+        }
+        .navbar-logo {
+            font-size: 26px;
+            font-weight: bold;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .navbar-menu {
+            display: flex;
+            gap: 25px;
+        }
+        .navbar-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 10px 15px;
+            border-radius: 30px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .navbar-menu a:hover {
+            background-color: #004080; /* Darker shade on hover */
+            transform: scale(1.1);
+        }
+        .navbar-button {
+            position: relative;
+            background-color: #ffcc00; /* Gold button for contrast */
+            color: #004080;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 30px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            cursor: pointer;
+            margin-right: 15px; /* Shift button slightly to the left */
+        }
+        .navbar-button:hover {
+            background-color: #e6b800; /* Darker shade of gold on hover */
+            transform: scale(1.1);
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 15px;
+            top: 100%;
+            left: -15px; /* Adjusted to align with the shifted button */
+        }
+        .dropdown-content a {
+            color: #004080;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            border-radius: 15px;
+            transition: background-color 0.3s ease;
+        }
+        .dropdown-content a:hover {
+            background-color: #e6b800;
+        }
+        .navbar-button:hover .dropdown-content {
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .navbar-menu {
+                flex-direction: column;
+                width: 100%;
+                gap: 10px;
+                margin-top: 10px;
+            }
+            .navbar-menu a {
+                width: 100%;
+                text-align: center;
+            }
+            .navbar-button {
+                width: 100%;
+                text-align: center;
+                margin-top: 10px;
+               
+            }
+            .dropdown-content {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar-logo">Scholarship Portal</div>
+        <div class="navbar-menu">
+            <a href="Home.html">Home</a>
+            <a href="#" id="servicesLink">Students</a>
+            <a href="#">Status</a>
+            <a href="#">Institute</a>
+            <a href="verify.html">Pending Verifications</a>
+            <a href="verifiedapplicationspage.html">verified applications</a>
+            <a href="login.html">Sign in</a>
+        </div>
+        <div class="navbar-button">
+            Login
+            <div class="dropdown-content">
+                <a href="#student-login">Student Login</a>
+                <a href="#sag-login">SAG Bureau Login</a>
+                <a href="#finance-login">Finance Bureau Login</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- <div class="header">
+        <div class="logo">
+            <img src="images.png" alt="J&K Gov Logo">
+            <h1>PMSSS Portal</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Schemes</a></li>
+                <li><a href="#">How to Apply</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </div> -->
+
+    <div class="container">
+        <div class="aadhaar-section">
+            <h2>Student Registration (for Applying Scholarship)</h2>
+            <form id="aadhaarForm" action="reg.html" method="GET" onsubmit="return validateAadhaar()">
+                <label for="aadhaar">Enter Your Aadhaar Number:</label>
+                <input type="text" id="aadhaar" name="aadhaar" maxlength="12" required>
+                <button type="submit">Go Ahead</button>
+            </form>
+        </div>
+
+        <div class="instructions">
+            <h3>Essential instructions to read</h3>
+            <ul>
+                <li>Student's registration will be done on the basis of successful OTP based demographic authentication
+                    of Aadhaar. Therefore, kindly note the following:</li>
+                <li>Please provide correct Aadhaar number of self in the prescribed field given below.</li>
+                <li>Please ensure beforehand that your Aadhaar is linked with an operative mobile number to receive OTP
+                    for authentication process.</li>
+                <li>Please ensure beforehand that your Name, Gender and DOB reflected in Aadhaar are correct (including
+                    spelling of name & surname). If there is any problem, you are advised to update/correct Aadhaar
+                    before making registration.</li>
+                <li>In case you do not have Aadhaar, you are requested to apply for Aadhaar enrolment at any Aadhaar
+                    enrolment centre at the earliest and revisit the portal with your e-Aadhaar details for completing
+                    the registration.</li>
+                <li>I hereby give my consent for authenticating myself with Demographic Aadhaar authentication system
+                    for the purpose of availing benefit of Scholarship.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 PMSSS Portal. All rights reserved.</p>
+    </div>
+
+    <script>
+        function validateAadhaar() {
+            const aadhaar = document.getElementById('aadhaar').value;
+            if (aadhaar.length === 12 && !isNaN(aadhaar)) {
+                return true;  // Allow form submission
+            } else {
+                alert("Please enter a valid 12-digit Aadhaar number.");
+                return false;  // Prevent form submission
+            }
+        }
+    </script>
+
+</body>
+
+</html>
